@@ -1,0 +1,106 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.form {
+    min-width: 450px;
+    background-color: white;
+    border: 1px dashed orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    padding: 15px;
+    box-shadow: 5px 5px 20px orange;
+    border-radius: 15px;
+
+}
+
+.form_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.closeBtn {
+    width: 25px;
+    height: 25px;
+    border: 1px dashed orange;
+    background-color: inherit;
+    box-shadow: 2px 2px 5px orange;
+    transition: all ease-in 200ms;
+    border-radius: 50%;
+}
+
+.closeBtn:hover {
+    border: 1px dashed cyan;
+    box-shadow: 5px 5px 5px cyan;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.fieldset {
+    border: none;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+    margin-bottom: 30px;
+}
+
+.input {
+    width: 80%;
+    padding: 10px;
+    border: 1px dashed orange;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: all ease-in 200ms;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px dashed cyan;
+    box-shadow: 2px 2px 5px cyan;
+    transform: scale(1.1);
+}
+
+.textarea {
+    height: 150px;
+    resize: none;
+    margin-bottom: 40px;
+}
+
+.submit {
+    width: 80%;
+    margin: 0 auto 30px;
+    border: 1px dashed orange;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all ease-in 200ms;
+}
+
+.submit:hover {
+    border: 1px dashed cyan;
+    box-shadow: 5px 5px 5px cyan;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
