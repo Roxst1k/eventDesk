@@ -1,17 +1,16 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import style from "../EventsList/style.module.css";
 import css from './event.module.css'
 import {NavLink} from "react-router-dom";
 
 
+
 const Event = ({title, description,id,setShowConfirmation, setEventId}) => {
-
-
     const handleDeleteEvent = (id) => {
         setShowConfirmation(true)
         setEventId(id)
-    }
 
+    }
 
     return (
         <li>
@@ -26,9 +25,8 @@ const Event = ({title, description,id,setShowConfirmation, setEventId}) => {
             </div>
             <p>{description}</p>
             <div className={style.wrapper}>
-                {/*<NavLink to='/registration'>Register</NavLink>*/}
-                <a href="#">Register</a>
-                <a href="#">View</a>
+                <NavLink to={`/registration/${id}`}>Register</NavLink>
+                <NavLink to={`/participants/${id}`}>View</NavLink>
             </div>
         </li>
     );

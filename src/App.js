@@ -1,27 +1,8 @@
-// import './App.css';
-// import {RouterProvider} from "react-router-dom";
-// import {router} from "./Router/router";
-//
-//
-//
-//
-// function App() {
-//
-//     return (
-//         <>
-//                 <RouterProvider router={router}/>
-//
-//         </>
-//     );
-// }
-//
-// export default App;
-
 import React, {createContext, useEffect, useState} from 'react';
 import EventsDesc from "./Pages/EventsDescr/EventsDesc";
 import Modal from "./Components/Modal/Modal";
 
-export const MyContext = createContext()
+export const MyContext = createContext([])
 
 const initialState = [
     {id: 0, title: 'Hello 1', description: 'description 1', subscribe: []},
@@ -35,11 +16,7 @@ const initialState = [
 
 const App = () => {
     const [data, setData] = useState(initialState)
-    const [modal, setModal] = useState(true)
-
-    useEffect(() => {
-        setData(initialState)
-    },[])
+    const [modal, setModal] = useState(false)
 
     return (
         <MyContext.Provider value={{data, setData}}>
